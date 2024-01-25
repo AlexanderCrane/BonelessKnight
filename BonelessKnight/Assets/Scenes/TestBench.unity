@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9569962, guid: fe2a5bf9b4c2d4a4b9853a8506f18c40, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -384,6 +388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1116371902028168016, guid: 4a46e821c58b5cd42b14eaab6d197266, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0d2a25dfb60c5e4479a2490b7db6aba4, type: 2}
     - target: {fileID: 1696834749189059949, guid: 4a46e821c58b5cd42b14eaab6d197266, type: 3}
       propertyPath: m_Name
       value: mini simple skeleton demo
@@ -525,7 +533,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8438308074112554797
+--- !u!1001 &2063173329
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -533,277 +541,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYLimit.limit
-      value: 30.229382
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 34.7462
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 151736372587966528, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYLimit.limit
-      value: 27.877579
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 33.79001
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 184044549731590423, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 766849903842674357, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.058100156
-      objectReference: {fileID: 0}
-    - target: {fileID: 766849903842674357, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.x
-      value: -0.07094993
-      objectReference: {fileID: 0}
-    - target: {fileID: 766849903842674357, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.y
-      value: -0.0000000018504466
-      objectReference: {fileID: 0}
-    - target: {fileID: 766849903842674357, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.z
-      value: 0.0000000031011858
-      objectReference: {fileID: 0}
-    - target: {fileID: 935712347906440322, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164613143085490303, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328328953949441353, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1610068721619467421, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1660910868946744001, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991407868565587224, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2272326569604355004, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2315607479606412672, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 42.05323
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 132.31624
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2647070011828356694, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780991289578690992, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780991289578690992, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780991289578690992, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780991289578690992, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2886605289975312283, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYLimit.limit
-      value: 29.90248
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: -177
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: -88.891754
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2949916477966939147, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 3016475063476292534, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052615535804522335, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.055151112
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052615535804522335, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.x
-      value: -0.07242444
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052615535804522335, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.y
-      value: -0.0000000018888993
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052615535804522335, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Center.z
-      value: 0.0000000031656444
-      objectReference: {fileID: 0}
-    - target: {fileID: 3321064038538874124, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3361830995243726083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318600818204581078, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318600818204581078, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318600818204581078, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318600818204581078, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338854492888456457, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016602651926100542, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5308950715684189980, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5361055701491474143, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.961
       objectReference: {fileID: 0}
     - target: {fileID: 5361055701491474143, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -841,347 +581,72 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5766172608512064870, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5766172608512064870, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5766172608512064870, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5766172608512064870, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 26.035206
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5842430345367319894, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623364847591462113, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631347658218520896, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631347658218520896, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631347658218520896, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631347658218520896, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 34.437836
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 50.34387
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 127.411575
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6982145679630563888, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7586755554042177844, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7586755554042177844, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7586755554042177844, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7586755554042177844, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600594232171476519, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600594232171476519, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600594232171476519, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600594232171476519, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687746204669755981, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165022586396542628, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165022586396542628, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: 27.814934
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 151.92639
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8230204025781064996, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8232702285408525873, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8595820507138194342, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
       propertyPath: m_Name
       value: BonelessKnight
-      objectReference: {fileID: 0}
-    - target: {fileID: 8696442996574777924, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYLimit.limit
-      value: 23.344719
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LowAngularXLimit.limit
-      value: -49.556427
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_HighAngularXLimit.limit
-      value: 46.439236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699263077758245083, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_XMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 96.828186
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740752626334468979, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.0001978301
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.640418
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.00034631178
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7680265
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.045
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 79.646
-      objectReference: {fileID: 0}
-    - target: {fileID: 8967572212092988768, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -179.992
-      objectReference: {fileID: 0}
-    - target: {fileID: 8971395053329194144, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_XMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYLimit.limit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 90.32649
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023748839553470585, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularZLimit.limit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularXDrive.positionSpring
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionDamper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9187396026172230972, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
-      propertyPath: m_AngularYZDrive.positionSpring
-      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f37bf994366a646898b8c4710f114a, type: 3}
+--- !u!1001 &5310613475488393430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15293294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5570326
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580940745572846829, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969015125412541390, guid: b47d98025edde564585df486d543fc29, type: 3}
+      propertyPath: m_Name
+      value: BonelessKnight2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b47d98025edde564585df486d543fc29, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1189,6 +654,7 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 78478756}
-  - {fileID: 8438308074112554797}
+  - {fileID: 5310613475488393430}
   - {fileID: 930435057}
   - {fileID: 925902713}
+  - {fileID: 2063173329}
