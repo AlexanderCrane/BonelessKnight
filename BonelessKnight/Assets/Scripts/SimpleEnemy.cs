@@ -33,6 +33,7 @@ public class SimpleEnemy : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        // Die();
     }
 
     private void Update()
@@ -102,21 +103,32 @@ public class SimpleEnemy : MonoBehaviour
         alreadyAttacked = false;
     }
 
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log("Collided with " + other.gameObject.name);
+        if(other.gameObject.layer == LayerMask.NameToLayer("BonelessKnight"))
+        {
+            Debug.Log("Collided with sword");
+            Die();
+        }
+    }
+
     public void Die()
     {
         Transform[] children = GetComponentsInChildren<Transform>(true); // the (true) parameter means we include even inactive objects in the search
         foreach(Transform t in children) {
-            if(t.gameObject.name != "Skeleton")
+            Debug.Log("Checking transform for " + t.gameObject.name);
+            if(t != t.root)
             {
                 t.gameObject.SetActive(!t.gameObject.activeInHierarchy); // flip the active state of the object
             }
             else
             {
-                t.GetComponent<CapsuleCollider>().enabled = false;
                 agent.enabled = false;
+                t.GetComponent<CapsuleCollider>().enabled = false;
                 animator.enabled = false;
             }
         }
+        StopAllCoroutines();
         this.enabled = false;
     }
 
