@@ -18,6 +18,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Debug.Log("Quitting game");
+            Application.Quit();
+        }
+    }
+
     private void FixedUpdate() 
     {
         cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
