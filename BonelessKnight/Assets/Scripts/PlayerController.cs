@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody hips;
     public bool isGrounded = true;
     public Animator animator;
+    private Vector3 cameraFacingWithoutX;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
+
+        // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(cameraFacingWithoutX), Time.deltaTime * 3);
+
+        // hips.rotation = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z)); 
 
         if(Mathf.Abs(hips.velocity.magnitude) > 1)
         {
@@ -35,13 +41,11 @@ public class PlayerController : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.LeftShift))
             {
-                Vector3 cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
                 hips.AddForce(cameraFacingWithoutX * (speed * 1.5f));
 
             }
             else
             {
-                Vector3 cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
                 hips.AddForce(cameraFacingWithoutX * speed);    
             }
         }
@@ -53,7 +57,6 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.S))
         {
-            Vector3 cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
             hips.AddForce(-cameraFacingWithoutX * speed);
         }
 
