@@ -28,7 +28,7 @@ public class SimpleEnemy : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("BonelessKnight").transform;
+        player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
