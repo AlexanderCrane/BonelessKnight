@@ -26,6 +26,9 @@ public class SimpleEnemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Animation
+    public Animator animator;
+
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -99,12 +102,28 @@ public class SimpleEnemy : MonoBehaviour
         alreadyAttacked = false;
     }
 
+    public void Die()
+    {
+        Transform[] children = GetComponentsInChildren<Transform>(true); // the (true) parameter means we include even inactive objects in the search
+        foreach(Transform t in children) {
+            if(t.gameObject.name != "Skeleton")
+            {
+                t.gameObject.SetActive(!t.gameObject.activeInHierarchy); // flip the active state of the object
+            }
+            else
+            {
+                t.GetComponent<CapsuleCollider>().enabled = false;
+                agent.enabled = false;
+                animator.enabled = false;
+            }
+        }
+        this.enabled = false;
+    }
+
     private IEnumerator PatrolCountDown()
     {
         yield return new WaitForSeconds(Random.Range(5, 10));
         Patroling();
         countingDown = false;
-
     }
-
 }
