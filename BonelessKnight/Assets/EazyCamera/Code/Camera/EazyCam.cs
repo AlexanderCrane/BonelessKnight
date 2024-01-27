@@ -148,6 +148,8 @@ namespace EazyCamera
             }
 
             Debug.DrawLine(_focalPoint, _transform.position, Color.black);
+
+            // _followTarget.GetComponent<ConfigurableJoint>().targetRotation = Quaternion.Euler(new Vector3(0, this._transform.rotation.eulerAngles.y, 0));
         }
 
         private void DefaultLook(float deltaTime)

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody hips;
     public bool isGrounded = true;
     public Animator animator;
-    private Vector3 cameraFacingWithoutX;
+    private Vector3 cameraFacingConvertedToY;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        cameraFacingWithoutX = Vector3.Normalize(new Vector3(Camera.main.transform.forward.x, Camera.main.transform.position.y, Camera.main.transform.forward.z));
+        // cameraFacingConvertedToY = Vector3.Normalize(new Vector3(0, Camera.main.transform.rotation.eulerAngles.y, 0));
+        
+        Vector3 controlDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 flattenedVector = Vector3.ProjectOnPlane(controlDirection, Vector3.up);
+        Vector3 actualDirection = Camera.main.transform.TransformDirection(flattenedVector);
+        Debug.Log("actualDirection is " + actualDirection);
+
+        Vector3 leftDirection = Quaternion.AngleAxis(90, Vector3.up) * actualDirection;
+        // Debug.Log("rotated 90 degrees left is " + actualDirection);
+
+        // Vector3 rightDirection = Quaternion.AngleAxis(90, Vector3.up) * actualDirection;
 
         // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(cameraFacingWithoutX), Time.deltaTime * 3);
 
@@ -44,35 +54,33 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Moving", false);
         }
 
-        // Note: ALL of the transform directions (transform.up, etc) are "incorrect" because the rig is set up this way and we aren't taking the time to fix it at the moment
-
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             if(Input.GetKey(KeyCode.LeftShift))
             {
-                hips.AddForce(cameraFacingWithoutX * (speed * 1.5f));
+                hips.AddForce(actualDirection * (speed * 1.5f));
 
             }
             else
             {
-                hips.AddForce(cameraFacingWithoutX * speed);    
+                hips.AddForce(actualDirection * speed);    
             }
         }
 
-        if(Input.GetKey(KeyCode.A))
-        {
-            hips.AddForce(hips.transform.forward * speed);
-        }
+        // if(Input.GetKey(KeyCode.A))
+        // {
+        //     hips.AddForce(actualDirection * speed);
+        // }
 
-        if(Input.GetKey(KeyCode.S))
-        {
-            hips.AddForce(-cameraFacingWithoutX * speed);
-        }
+        // if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        // {
+        //     hips.AddForce(actualDirection * speed);
+        // }
 
-        if(Input.GetKey(KeyCode.D))
-        {
-            hips.AddForce(-hips.transform.forward * speed);
-        }
+        // if(Input.GetKey(KeyCode.D))
+        // {
+        //     hips.AddForce(-actualDirection * speed);
+        // }
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {

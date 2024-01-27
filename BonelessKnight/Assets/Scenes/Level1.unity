@@ -6362,7 +6362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _followTarget: {fileID: 353688738}
   _settings:
-    Distance: -3.6019278
+    Distance: -3.6014845
     DefaultRotation: {x: 0, y: 0}
     OrbitEnabled: 1
     MoveSpeed: 5
@@ -6892,7 +6892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.07193
+      value: -79.07149
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6912,15 +6912,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 18.573
+      value: 0.782
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 178.699
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.414
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8298402627871586272, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_Name
@@ -10437,9 +10437,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2057087059941598025, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularXDrive.positionSpring
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057087059941598025, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularYZDrive.positionSpring
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343160568202705472, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: speed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232344092830417956, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularXDrive.positionSpring
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232344092830417956, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularYZDrive.positionSpring
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7461445427846852661, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_Name
       value: BonelessKnight (Root Pelvis)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711883789411856197, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularXDrive.positionSpring
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711883789411856197, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_AngularYZDrive.positionSpring
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
