@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = true;
     public Animator animator;
     private Vector3 cameraFacingWithoutX;
+    private int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -71,5 +72,10 @@ public class PlayerController : MonoBehaviour
             hips.AddForce(new Vector3(0, jumpForce, 0));
             isGrounded = false;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
     }
 }
