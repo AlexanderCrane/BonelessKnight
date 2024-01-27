@@ -11,6 +11,8 @@ public class SimpleEnemy : MonoBehaviour
 
     public bool countingDown;
 
+    public GameObject ThrownObject;
+
     public LayerMask whatIsGround, whatIsPlayer;
 
     //Patroling
@@ -88,9 +90,9 @@ public class SimpleEnemy : MonoBehaviour
         if (!alreadyAttacked)
         {
             //Attack code here
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            Rigidbody rb = Instantiate(ThrownObject, new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 700f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 200f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
