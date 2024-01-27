@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.visible = false;
     }
 
     void Update()
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             hips.AddForce(-hips.transform.forward * speed);
         }
 
-        if(Input.GetAxis("Jump") > 0 && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Debug.Log("Jumping");
             hips.AddForce(new Vector3(0, jumpForce, 0));

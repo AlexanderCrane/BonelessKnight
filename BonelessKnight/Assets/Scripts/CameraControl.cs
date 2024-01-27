@@ -18,6 +18,10 @@ public class CameraControl : MonoBehaviour
     }
     private void Update()
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
         // if(Input.GetAxis("Joystick X") != 0.0f ||
         //     Input.GetAxis("Joystick Y") != 0.0f )
         // {
