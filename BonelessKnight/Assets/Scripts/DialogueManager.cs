@@ -66,6 +66,7 @@ public class DialogueManager : MonoBehaviour
             // close dialogue
             dialogueCanvasManager.dialogueWindow.SetActive(false);
             Time.timeScale = 1;
+            Cursor.visible = false;
         }
     }
     private void OnTriggerEnter(Collider other)
