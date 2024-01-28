@@ -11,6 +11,7 @@ public class Explode : MonoBehaviour
     Collider[] colliders = new Collider[20];
     public float explosionTimer = 3f;
     public float destroyTimer = 3.1f;
+    public GameObject Explosion;
     void Update()
     {
         explosionTimer -= Time.deltaTime;
@@ -29,7 +30,7 @@ public class Explode : MonoBehaviour
     }
     void ExplodeNonAlloc()
     {
-        
+        GameObject.Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         int numColliders = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, colliders);
         if (numColliders > 0)
         {
