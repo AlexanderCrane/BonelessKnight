@@ -57,6 +57,15 @@ public class SimpleEnemy : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
+        if(agent.velocity.magnitude >=0)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
+
     }
     private void Patroling()
     {
@@ -91,6 +100,8 @@ public class SimpleEnemy : MonoBehaviour
 
     private void AttackPlayer()
     {
+        animator.SetBool("Attacking", true);
+
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
@@ -106,6 +117,8 @@ public class SimpleEnemy : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+
+        animator.SetBool("Attacking", false);
 
     }
 
