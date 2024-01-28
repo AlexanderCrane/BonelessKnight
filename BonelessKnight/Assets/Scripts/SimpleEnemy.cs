@@ -15,6 +15,8 @@ public class SimpleEnemy : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public GameManager gameManager;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -35,6 +37,12 @@ public class SimpleEnemy : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        gameManager = FindObjectOfType<GameManager>();
+
+        if(gameManager == null)
+        {
+            Debug.LogError("Cannot find Game Manager!");
+        }
         // Die();
     }
 
@@ -131,6 +139,9 @@ public class SimpleEnemy : MonoBehaviour
             }
         }
         StopAllCoroutines();
+
+        gameManager.ReduceSkeletonCount();
+
         this.enabled = false;
     }
 

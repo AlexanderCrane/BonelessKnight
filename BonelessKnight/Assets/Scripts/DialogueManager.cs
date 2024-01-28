@@ -5,19 +5,27 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     public Canvas diageticCanvas;
-    public DialogueCanvasManager dialogueCanvasManager;
+    public CanvasManager canvasManager;
     public List<string> linesOfDialogue;
     public int currentLine = 0;
-    bool shouldPauseWhenTalking = true;
+    public bool isCutscene = false;
+    public bool shouldPauseWhenTalking = true;
     private bool closeEnoughToTalk;
 
     // Start is called before the first frame update
     void Start()
     {
-        dialogueCanvasManager = FindObjectOfType<DialogueCanvasManager>();
-        diageticCanvas.worldCamera = Camera.main;
-        diageticCanvas.gameObject.SetActive(false);
-        dialogueCanvasManager.nextButton.onClick.AddListener(() => NextPressed());
+        canvasManager = FindObjectOfType<CanvasManager>();
+        canvasManager.nextButton.onClick.AddListener(() => NextPressed());
+        if(!isCutscene)
+        {
+            diageticCanvas.worldCamera = Camera.main;
+            diageticCanvas.gameObject.SetActive(false);
+        }
+        else
+        {
+            Initialize();
+        }
     }
 
     private void Update() 
@@ -33,7 +41,8 @@ public class DialogueManager : MonoBehaviour
     {
         currentLine = 0;
         Debug.Log("Initializing dialogue for " + this.gameObject.name);
-        dialogueCanvasManager.dialogueWindow.SetActive(true);
+        canvasManager.dialogueWindow.SetActive(true);
+        canvasManager.skeletonCountPanel.SetActive(false);
         Cursor.visible = true;
 
         if(shouldPauseWhenTalking)
@@ -43,28 +52,32 @@ public class DialogueManager : MonoBehaviour
 
         if(linesOfDialogue.Count > 0)
         {
-            dialogueCanvasManager.tmproText.text = linesOfDialogue[0];
+            canvasManager.dialogueTmproText.text = linesOfDialogue[0];
         }
 
     }
 
-    public void NextPressed()
+    public virtual void NextPressed()
     {
         Debug.Log("Next pressed");
         if(currentLine < linesOfDialogue.Count-1)
         {
             currentLine++;
-            dialogueCanvasManager.tmproText.text = linesOfDialogue[currentLine];
+            canvasManager.dialogueTmproText.text = linesOfDialogue[currentLine];
         }
         else
         {
             Debug.Log("Closing dialogue");
 
-            dialogueCanvasManager.nextButton.onClick.RemoveListener(NextPressed);
+            canvasManager.nextButton.onClick.RemoveListener(NextPressed);
             currentLine = 0;
 
             // close dialogue
-            dialogueCanvasManager.dialogueWindow.SetActive(false);
+            canvasManager.dialogueWindow.SetActive(false);
+            if(!isCutscene)
+            {
+                canvasManager.skeletonCountPanel.SetActive(true);
+            }
             Time.timeScale = 1;
             Cursor.visible = false;
         }
