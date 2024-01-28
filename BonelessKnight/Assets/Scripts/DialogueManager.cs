@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         currentLine = 0;
         Debug.Log("Initializing dialogue for " + this.gameObject.name);
@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("Player entered dialogue trigger");
+            Debug.Log("Player entered dialogue trigger for " +  this.gameObject.name);
             diageticCanvas.gameObject.SetActive(true);
             closeEnoughToTalk = true;
         }

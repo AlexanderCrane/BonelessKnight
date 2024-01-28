@@ -8,6 +8,7 @@ TagManager:
   - ThrownObject
   - Enemy
   - DialogueCanvas
+  - MainCanvas
   layers:
   - Default
   - TransparentFX

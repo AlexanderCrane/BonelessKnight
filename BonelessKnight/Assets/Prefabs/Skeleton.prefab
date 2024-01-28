@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6128121974754101140}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,17 +126,19 @@ MonoBehaviour:
   agent: {fileID: 8051113715245839002}
   player: {fileID: 0}
   countingDown: 0
+  ThrownObject: {fileID: 1017324774632545229, guid: 4ff95d6d09262ac40804ff15608eea5d, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
+  gameManager: {fileID: 0}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 3
-  sightRange: 10
-  attackRange: 0.5
+  timeBetweenAttacks: 5
+  sightRange: 20
+  attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   animator: {fileID: 7511577906968945964}
@@ -1588,6 +1590,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5830235219910117016, guid: 33657c4461453db4dac0ace786ad64cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166763777215176159, guid: 33657c4461453db4dac0ace786ad64cc, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6475963548269667028, guid: 33657c4461453db4dac0ace786ad64cc, type: 3}

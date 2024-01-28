@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int numSkeletonsRemaining;
+    public int numSkeletonsRemaining;
     
     private CanvasManager canvasManager;
     
@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Cannot find main UI canvas or it is missing CanvasManager component!");
         }
 
+        CountNumberOfSkeletonsInScene();
+
         if(SceneManager.GetActiveScene().name != "MainMenu" &&  SceneManager.GetActiveScene().name != "Intro")
         {
             canvasManager.skeletonCountPanel.SetActive(true);
@@ -59,6 +61,12 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    public void CountNumberOfSkeletonsInScene()
+    {
+        SimpleEnemy[] skeletons = FindObjectsOfType<SimpleEnemy>();
+        numSkeletonsRemaining = skeletons.Length;
     }
 
     public void ReduceSkeletonCount()
