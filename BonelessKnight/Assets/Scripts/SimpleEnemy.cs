@@ -98,7 +98,7 @@ public class SimpleEnemy : MonoBehaviour
         if (!alreadyAttacked)
         {
             //Attack code here
-            Rigidbody rb = Instantiate(ThrownObject, new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(ThrownObject, new Vector3(transform.position.x, transform.position.y+2f, transform.position.z), Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 700f, ForceMode.Impulse);
             rb.AddForce(transform.up * 200f, ForceMode.Impulse);
 

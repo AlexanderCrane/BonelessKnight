@@ -29,6 +29,7 @@ public class Explode : MonoBehaviour
     }
     void ExplodeNonAlloc()
     {
+        
         int numColliders = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, colliders);
         if (numColliders > 0)
         {
