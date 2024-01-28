@@ -11783,6 +11783,14 @@ PrefabInstance:
       propertyPath: m_Drag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7155606928878856966, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155606928878856966, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_TagString
+      value: weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 7232344092830417956, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_AngularXDrive.positionDamper
       value: 0
