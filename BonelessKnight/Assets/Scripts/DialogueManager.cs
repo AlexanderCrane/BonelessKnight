@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public int currentLine = 0;
     public bool isCutscene = false;
     public bool shouldPauseWhenTalking = true;
-    private bool closeEnoughToTalk;
+    protected bool closeEnoughToTalk;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void Update() 
+    protected virtual void Update() 
     {
         if(Input.GetKeyDown(KeyCode.E) && closeEnoughToTalk)
         {

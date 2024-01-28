@@ -13,6 +13,11 @@ public class CastleGateDialogueManager : DialogueManager
         gameManager = FindObjectOfType<GameManager>();    
     }
 
+    protected override void Update() 
+    {
+        base.Update();
+    }
+
     public override void Initialize()
     {
         Debug.Log("Initializing castle gate dialogue");
