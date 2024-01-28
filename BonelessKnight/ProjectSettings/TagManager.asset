@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - DialogueCanvas
   - MainCanvas
+  - FxTemporaire
+  - weapon
   layers:
   - Default
   - TransparentFX

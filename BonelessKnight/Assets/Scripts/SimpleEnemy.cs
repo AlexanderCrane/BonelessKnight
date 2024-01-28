@@ -29,6 +29,7 @@ public class SimpleEnemy : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    bool dying = false;
 
     //Animation
     public Animator animator;
@@ -115,8 +116,9 @@ public class SimpleEnemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         Debug.Log("Collided with " + other.gameObject.name);
-        if(other.gameObject.layer == LayerMask.NameToLayer("BonelessKnight"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("BonelessKnight") && other.gameObject.tag == "weapon" && !dying)
         {
+            dying = true;
             Debug.Log("Collided with sword");
             Die();
         }

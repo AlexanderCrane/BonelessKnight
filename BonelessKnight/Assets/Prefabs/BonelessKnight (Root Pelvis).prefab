@@ -3304,8 +3304,8 @@ GameObject:
   - component: {fileID: 773566077993149877}
   - component: {fileID: 6757601913667465460}
   - component: {fileID: 8494673753824970881}
-  m_Layer: 8
-  m_Name: w_sword_B
+  m_Layer: 6
+  m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4116,9 +4116,10 @@ GameObject:
   - component: {fileID: 3468791873180240785}
   - component: {fileID: 328993525708269579}
   - component: {fileID: 8489076148287618028}
+  - component: {fileID: 8916644332424450863}
   m_Layer: 6
   m_Name: Bip001 R Hand
-  m_TagString: Untagged
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4317,6 +4318,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 2335055233536917298}
+--- !u!65 &8916644332424450863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110669618009353153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.2274842, y: 0.16348094, z: 1.3574182}
+  m_Center: {x: -0.07851488, y: -0.011372265, z: -0.46676138}
 --- !u!1 &8618744271261592018
 GameObject:
   m_ObjectHideFlags: 0
