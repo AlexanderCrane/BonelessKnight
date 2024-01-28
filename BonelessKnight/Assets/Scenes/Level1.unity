@@ -10032,10 +10032,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5402409257600015259, guid: 972bc78f7822b3f4b8c2d2536cb64fdb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1729867655}
+      addedObject: {fileID: 1729867654}
     - targetCorrespondingSourceObject: {fileID: 5402409257600015259, guid: 972bc78f7822b3f4b8c2d2536cb64fdb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1729867654}
+      addedObject: {fileID: 1729867655}
   m_SourcePrefab: {fileID: 100100000, guid: 972bc78f7822b3f4b8c2d2536cb64fdb, type: 3}
 --- !u!1 &1729867653 stripped
 GameObject:
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729867653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6279a1b811399449c3f35e090ad392, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dbb73701b8e27442b25840edcae163a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   diageticCanvas: {fileID: 1437601184}
@@ -10082,6 +10082,8 @@ MonoBehaviour:
   currentLine: 0
   isCutscene: 0
   shouldPauseWhenTalking: 1
+  gameManager: {fileID: 0}
+  buttonTextMesh: {fileID: 4624744928567670123}
 --- !u!1 &1738423280
 GameObject:
   m_ObjectHideFlags: 0
@@ -12648,6 +12650,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b83ab00d2584d4e8800e585ac53e22, type: 3}
+--- !u!114 &4624744928567670123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6739923000782052958, guid: a4b83ab00d2584d4e8800e585ac53e22, type: 3}
+  m_PrefabInstance: {fileID: 4624744928567670122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
