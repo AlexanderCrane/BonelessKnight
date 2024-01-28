@@ -118,8 +118,7 @@ public class SimpleEnemy : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
 
-        animator.SetBool("Attacking", false);
-
+        StartCoroutine(WaitToStopAttackAnim());
     }
 
     private void ResetAttack()
@@ -165,5 +164,11 @@ public class SimpleEnemy : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(5, 10));
         Patroling();
         countingDown = false;
+    }
+
+    private IEnumerator WaitToStopAttackAnim()
+    {
+        yield return new WaitForSeconds(1);
+        animator.SetBool("Attacking", false);
     }
 }

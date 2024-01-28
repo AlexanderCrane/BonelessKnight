@@ -11621,11 +11621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2335055233525496532, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11634,6 +11634,10 @@ PrefabInstance:
     - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233537275802, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2432871981420208933, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_AngularXDrive.positionDamper
