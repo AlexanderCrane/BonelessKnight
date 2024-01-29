@@ -16,6 +16,12 @@ public class IntroCutsceneDialogueManager : DialogueManager
         gameManager = FindObjectOfType<GameManager>();
     }
 
+    protected override void Start()
+    {
+        base.Start();
+        base.Initialize();
+    }
+
     public override void NextPressed()
     {
         if(currentLine < linesOfDialogue.Count-1)
@@ -27,7 +33,7 @@ public class IntroCutsceneDialogueManager : DialogueManager
         {
             wizardAnimator.SetBool("Attacking", true);
 
-            canvasManager.nextButton.onClick.RemoveListener(NextPressed);
+            canvasManager.nextButton.onClick.RemoveAllListeners();
             currentLine = 0;
 
             // close dialogue
@@ -61,5 +67,4 @@ public class IntroCutsceneDialogueManager : DialogueManager
             SceneManager.LoadScene("Level1");
         }
     }
-
 }

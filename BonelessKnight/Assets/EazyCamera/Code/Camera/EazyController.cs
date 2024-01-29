@@ -208,10 +208,10 @@ namespace EazyCamera
                 CycleLeft();
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                CycleRight();
-            }
+            // if (Input.GetKeyDown(KeyCode.E))
+            // {
+            //     CycleRight();
+            // }
 
             if (Input.GetKeyDown(KeyCode.U))
             {

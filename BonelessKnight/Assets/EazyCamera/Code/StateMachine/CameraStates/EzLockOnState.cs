@@ -72,14 +72,14 @@ namespace EazyCamera.Legacy
             {
                 if (_switchStyle == TargetSwitchStyle.Nearest)
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        MoveToNextTarget(_cameraTransform.right);
-                    }
-                    else if (Input.GetKeyDown(KeyCode.Q))
-                    {
-                        MoveToNextTarget(-_cameraTransform.right);
-                    }
+                    // if (Input.GetKeyDown(KeyCode.E))
+                    // {
+                    //     MoveToNextTarget(_cameraTransform.right);
+                    // }
+                    // else if (Input.GetKeyDown(KeyCode.Q))
+                    // {
+                    //     MoveToNextTarget(-_cameraTransform.right);
+                    // }
                 }
                 else if (_switchStyle == TargetSwitchStyle.Cycle)
                 {

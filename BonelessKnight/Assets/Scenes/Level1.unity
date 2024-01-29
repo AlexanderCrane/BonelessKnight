@@ -6924,7 +6924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _followTarget: {fileID: 353688738}
   _settings:
-    Distance: -3.6014845
+    Distance: -3.6013455
     DefaultRotation: {x: 0, y: 0}
     OrbitEnabled: 1
     MoveSpeed: 5
@@ -7571,7 +7571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.07149
+      value: -79.07135
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10019,6 +10019,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5402409257600015259, guid: 972bc78f7822b3f4b8c2d2536cb64fdb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8635949673533708708, guid: 972bc78f7822b3f4b8c2d2536cb64fdb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -11618,6 +11622,30 @@ PrefabInstance:
     - target: {fileID: 2057087059941598025, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
       value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233525496532, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233535110958, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233536978496, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335055233537275802, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2432871981420208933, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_AngularXDrive.positionDamper

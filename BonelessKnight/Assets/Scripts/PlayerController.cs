@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
         Vector3 controlDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         Vector3 flattenedVector = Vector3.ProjectOnPlane(controlDirection, Vector3.up);
         Vector3 actualDirection = Camera.main.transform.TransformDirection(flattenedVector);
-        Debug.Log("actualDirection is " + actualDirection);
 
         Vector3 leftDirection = Quaternion.AngleAxis(90, Vector3.up) * actualDirection;
         // Debug.Log("rotated 90 degrees left is " + actualDirection);

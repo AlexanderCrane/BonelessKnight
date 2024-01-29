@@ -57,6 +57,15 @@ public class SimpleEnemy : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
+        if(agent.velocity.magnitude >=0)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
+
     }
     private void Patroling()
     {
@@ -91,6 +100,8 @@ public class SimpleEnemy : MonoBehaviour
 
     private void AttackPlayer()
     {
+        animator.SetBool("Attacking", true);
+
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
@@ -107,6 +118,7 @@ public class SimpleEnemy : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
 
+        StartCoroutine(WaitToStopAttackAnim());
     }
 
     private void ResetAttack()
@@ -115,7 +127,6 @@ public class SimpleEnemy : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Collided with " + other.gameObject.name);
         if(other.gameObject.layer == LayerMask.NameToLayer("BonelessKnight") && other.gameObject.tag == "weapon" && !dying)
         {
             dying = true;
@@ -152,5 +163,11 @@ public class SimpleEnemy : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(5, 10));
         Patroling();
         countingDown = false;
+    }
+
+    private IEnumerator WaitToStopAttackAnim()
+    {
+        yield return new WaitForSeconds(1);
+        animator.SetBool("Attacking", false);
     }
 }

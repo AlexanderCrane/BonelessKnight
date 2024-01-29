@@ -11,12 +11,12 @@ public class DialogueManager : MonoBehaviour
     public bool isCutscene = false;
     public bool shouldPauseWhenTalking = true;
     protected bool closeEnoughToTalk;
+    public bool alreadyTalking;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         canvasManager = FindObjectOfType<CanvasManager>();
-        canvasManager.nextButton.onClick.AddListener(() => NextPressed());
         if(!isCutscene)
         {
             diageticCanvas.worldCamera = Camera.main;
@@ -24,13 +24,13 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Initialize();
+            // Initialize();
         }
     }
 
     protected virtual void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.E) && closeEnoughToTalk)
+        if(Input.GetKeyDown(KeyCode.E) && closeEnoughToTalk && !alreadyTalking)
         {
             Initialize();
         }
@@ -39,8 +39,12 @@ public class DialogueManager : MonoBehaviour
 
     public virtual void Initialize()
     {
+        alreadyTalking = true;
+        canvasManager.nextButton.onClick.AddListener(() => NextPressed());
+
         currentLine = 0;
         Debug.Log("Initializing dialogue for " + this.gameObject.name);
+        Debug.Log("There are " + linesOfDialogue.Count + " lines of dialogue");
         canvasManager.dialogueWindow.SetActive(true);
         canvasManager.skeletonCountPanel.SetActive(false);
         Cursor.visible = true;
@@ -54,7 +58,6 @@ public class DialogueManager : MonoBehaviour
         {
             canvasManager.dialogueTmproText.text = linesOfDialogue[0];
         }
-
     }
 
     public virtual void NextPressed()
@@ -62,15 +65,16 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Next pressed");
         if(currentLine < linesOfDialogue.Count-1)
         {
+            Debug.Log("Moving on to next line");
             currentLine++;
             canvasManager.dialogueTmproText.text = linesOfDialogue[currentLine];
         }
         else
         {
             Debug.Log("Closing dialogue");
-
-            canvasManager.nextButton.onClick.RemoveListener(NextPressed);
             currentLine = 0;
+
+            canvasManager.nextButton.onClick.RemoveAllListeners();
 
             // close dialogue
             canvasManager.dialogueWindow.SetActive(false);
@@ -80,8 +84,10 @@ public class DialogueManager : MonoBehaviour
             }
             Time.timeScale = 1;
             Cursor.visible = false;
+            alreadyTalking = false;
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -97,6 +103,8 @@ public class DialogueManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            canvasManager.nextButton.onClick.RemoveAllListeners();
+
             Debug.Log("Player Exited dialogue trigger");
             closeEnoughToTalk = false;
             diageticCanvas.gameObject.SetActive(false);
@@ -104,7 +112,3 @@ public class DialogueManager : MonoBehaviour
     }
 }
 
-// public class Dialogue
-// {
-//     public string dialogueText;
-// }

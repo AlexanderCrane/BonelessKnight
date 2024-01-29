@@ -23,7 +23,7 @@ public class CastleGateDialogueManager : DialogueManager
         Debug.Log("Initializing castle gate dialogue");
         if(gameManager.numSkeletonsRemaining <= 0)
         {
-            canvasManager.nextButton.onClick.RemoveListener(NextPressed);
+            canvasManager.nextButton.onClick.RemoveAllListeners();
             canvasManager.nextButton.onClick.AddListener(gameManager.QuitGame);
             buttonTextMesh.text = "Quit";
 
@@ -40,6 +40,8 @@ public class CastleGateDialogueManager : DialogueManager
         }
         else
         {
+            canvasManager.nextButton.onClick.AddListener(() => NextPressed());
+
             currentLine = 0;
             Debug.Log("Initializing dialogue for " + this.gameObject.name);
             canvasManager.dialogueWindow.SetActive(true);
@@ -60,7 +62,7 @@ public class CastleGateDialogueManager : DialogueManager
 
     public override void NextPressed()
     {
-        Debug.Log("Next pressed");
+        Debug.Log("Next pressed from castle gate");
         if(currentLine < linesOfDialogue.Count-1)
         {
             currentLine++;
@@ -70,7 +72,7 @@ public class CastleGateDialogueManager : DialogueManager
         {
             Debug.Log("Closing dialogue");
 
-            canvasManager.nextButton.onClick.RemoveListener(NextPressed);
+            canvasManager.nextButton.onClick.RemoveAllListeners();
             currentLine = 0;
 
             // close dialogue
