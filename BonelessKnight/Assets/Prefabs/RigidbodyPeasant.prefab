@@ -112,8 +112,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diageticCanvas: {fileID: 7171782786457887302}
-  dialogueCanvasManager: {fileID: 0}
+  canvasManager: {fileID: 0}
   linesOfDialogue: []
+  currentLine: 0
+  isCutscene: 0
+  shouldPauseWhenTalking: 1
+  alreadyTalking: 0
 --- !u!135 &8587755676706605220
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1932,7 +1936,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5269537010984846528}
   m_LocalRotation: {x: 0.7071068, y: -7.1054274e-15, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.024100017}
+  m_LocalPosition: {x: 0, y: 0, z: 0.019}
   m_LocalScale: {x: 0.01, y: 0.009999997, z: 0.009999997}
   m_ConstrainProportionsScale: 0
   m_Children:
