@@ -1510,7 +1510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.614
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7573,7 +7573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _followTarget: {fileID: 353688738}
   _settings:
-    Distance: -3.5611773
+    Distance: -3.2640631
     DefaultRotation: {x: 0, y: 0}
     OrbitEnabled: 1
     MoveSpeed: 5
@@ -8220,7 +8220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.03118
+      value: -78.73406
       objectReference: {fileID: 0}
     - target: {fileID: 8291547344020004477, guid: 207e0d219ebda7848968d100e093243e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10909,7 +10909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"E"
+  m_text: 'X
 
     to open castle door!'
   m_isRightToLeft: 0
@@ -11877,7 +11877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.614
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12102,7 +12102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.614
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9013365441442578074, guid: 46dadf31f7859b343a1e7fa954cf7114, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12818,6 +12818,10 @@ PrefabInstance:
     - target: {fileID: 6343160568202705472, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: speed
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343160568202705472, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
+      propertyPath: jumpForce
+      value: 7500
       objectReference: {fileID: 0}
     - target: {fileID: 6346704592623666095, guid: 914ed6ad10df47745a0366dc559d8755, type: 3}
       propertyPath: m_AngularXDrive.positionDamper

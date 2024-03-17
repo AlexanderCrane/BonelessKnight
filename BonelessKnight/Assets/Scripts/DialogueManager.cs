@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     protected virtual void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.E) && closeEnoughToTalk && !alreadyTalking)
+        if((Input.GetKeyDown(KeyCode.E) || Input.GetButton("Fire3")) && closeEnoughToTalk && !alreadyTalking)
         {
             Initialize();
         }

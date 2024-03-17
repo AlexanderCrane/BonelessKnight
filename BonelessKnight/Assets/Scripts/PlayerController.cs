@@ -52,10 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Moving", false);
         }
-
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0)
         {
-            if(Input.GetKey(KeyCode.LeftShift))
+            if(Input.GetButton("Run"))
             {
                 hips.AddForce(actualDirection * (speed * 1.5f));
 
@@ -81,7 +80,7 @@ public class PlayerController : MonoBehaviour
         //     hips.AddForce(-actualDirection * speed);
         // }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")) && isGrounded)
         {
             Debug.Log("Jumping");
             hips.AddForce(new Vector3(0, jumpForce, 0));

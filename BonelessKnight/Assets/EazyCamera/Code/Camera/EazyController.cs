@@ -184,8 +184,8 @@ namespace EazyCamera
                 _controlledCamera.IncreaseZoomDistance(scrollDelta, dt);
             }
 
-            float horz = Input.GetAxis(Util.MouseX);
-            float vert = Input.GetAxis(Util.MouseY);
+            float horz = Input.GetAxis("Mouse X");
+            float vert = Input.GetAxis("Mouse Y");
             _controlledCamera.IncreaseRotation(horz, vert, dt);
 
             if (Input.GetKeyDown(KeyCode.R))
